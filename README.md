@@ -1,1 +1,1 @@
-For Headers Scan - target url
+Key: Target URL
