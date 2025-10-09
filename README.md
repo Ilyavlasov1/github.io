@@ -2,7 +2,7 @@
 
 This repo serves a single static page with strong security defaults.
 
-## How to use
+## To-Do
 1. Copy everything in this folder to the root of your `ilyavlasov1.github.io` repo.
 2. Replace `assets/img/portfolio_selfie.jpg` with your real photo (keep the same name).
 3. (Optional) Replace `assets/img/stock-terminal.jpg` with your preferred stock image.
