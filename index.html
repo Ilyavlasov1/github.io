@@ -1,12 +1,171 @@
 <!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Ilya Vlasov — Test Site</title>
-  <meta name="description" content="Small demo site for AppSec portfolio scans.">
-</head>
-<body>
-  <h1>Ilya Vlasov — AppSec Test Page</h1>
-  <p>This site is intentionally minimal — used for security headers and baseline scans only.</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ilya Vlasov — Cybersecurity & QA</title>
+
+    <!-- Security: strict Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
+
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Ilya Vlasov — Cybersecurity-focused QA engineer. Portfolio, projects, and contact." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" as="style" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="site-header container">
+      <div class="brand">
+        <!-- Replace this image with your real photo named exactly 'portfolio_selfie.jpg' -->
+        <img class="avatar" src="assets/img/portfolio_selfie.jpg" alt="Portrait of Ilya Vlasov" />
+        <div class="brand-text">
+          <h1>Ilya Vlasov</h1>
+          <p class="tag">Cybersecurity - QA Automation</p>
+          <p class="loc">Chicago, IL</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certs">Certs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__text">
+            <h2>Threat-minded QA -> AppSec</h2>
+            <p>
+              I test how systems actually break: secure-by-default configs, automated checks, and 
+              clean repro steps that engineers can ship against.
+            </p>
+            <div class="cta">
+              <a class="btn btn--primary" href="https://github.com/ilyavlasov1" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a class="btn" href="#portfolio">See Portfolio</a>
+              <a class="btn" href="assets/Ilya_Vlasov_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+            </div>
+          </div>
+          <figure class="hero__art">
+            <img src="assets/img/stock-terminal.jpg" alt="Green-on-black terminal motif" />
+          </figure>
+        </div>
+        <div class="bg-grid" aria-hidden="true"></div>
+      </section>
+
+      <section id="portfolio" class="section container">
+        <h3 class="section__title">Portfolio</h3>
+        <ul class="cards">
+          <li class="card">
+            <h4>STRIDE-Lite Scanner</h4>
+            <p>CLI templates and scripts to walk apps through STRIDE categories; produces actionable findings.</p>
+            <div class="meta">Python - Threat Modeling - CLI</div>
+            <p class="links">
+              <a href="https://github.com/ilyavlasov1" target="_blank" rel="noopener noreferrer">Repo</a>
+            </p>
+          </li>
+          <li class="card">
+            <h4>HTTP Security Headers Check</h4>
+            <p>Automated header baseline (CSP, HSTS, XFO, COOP/COEP) with friendly pass/fail output.</p>
+            <div class="meta">Python - Requests - CI</div>
+            <p class="links">
+              <a href="https://github.com/ilyavlasov1" target="_blank" rel="noopener noreferrer">Repo</a>
+            </p>
+          </li>
+          <li class="card">
+            <h4>OWASP ZAP Smoke</h4>
+            <p>Lightweight spider and passive checks intended for PR-level gating.</p>
+            <div class="meta">ZAP - CI - DAST</div>
+            <p class="links">
+              <a href="https://github.com/ilyavlasov1" target="_blank" rel="noopener noreferrer">Repo</a>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experience" class="section section--alt">
+        <div class="container">
+          <h3 class="section__title">Experience Snapshot</h3>
+          <ul class="timeline">
+            <li>
+              <div class="t-head">
+                <strong>Life Fitness</strong><span>QA Engineer - Integrations</span><time>2024-2025</time>
+              </div>
+              <p>Integration testing for Halo platform; built repeatable checks and defect hygiene across teams.</p>
+            </li>
+            <li>
+              <div class="t-head">
+                <strong>AVA (Live Captions)</strong><span>QA Engineer</span><time>3 yrs</time>
+              </div>
+              <p>Manual and automation; shipped high-impact accessibility features with tight release cycles.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <h3 class="section__title">Skills</h3>
+        <div class="skill-grid">
+          <div>
+            <h5>Security</h5>
+            <ul>
+              <li>Threat Modeling (STRIDE)</li>
+              <li>OWASP Top 10 hygiene</li>
+              <li>HTTP header baselines (CSP/HSTS)</li>
+              <li>DAST (ZAP passive)</li>
+            </ul>
+          </div>
+          <div>
+            <h5>QA & Automation</h5>
+            <ul>
+              <li>Python, Pytest</li>
+              <li>REST checks</li>
+              <li>TestRail, Jira</li>
+              <li>CI: GitHub Actions</li>
+            </ul>
+          </div>
+          <div>
+            <h5>Cloud</h5>
+            <ul>
+              <li>Azure fundamentals</li>
+              <li>Containers and K8s basics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="certs" class="section section--alt">
+        <div class="container">
+          <h3 class="section__title">Certifications</h3>
+          <ul class="badges">
+            <li>CompTIA Security+ (prep)</li>
+            <li>AZ-900</li>
+            <li>AI-900</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section container">
+        <h3 class="section__title">Contact</h3>
+        <p>
+          Best way to reach me is on <a href="https://www.linkedin.com/in/ivy-vlasov" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
+          or open an issue on my <a href="https://github.com/ilyavlasov1" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+        <p class="small">This site avoids third-party scripts and trackers. All links with target="_blank" use rel="noopener noreferrer".</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="y"></span> Ilya Vlasov — Built with security-first defaults.</p>
+      </div>
+    </footer>
+
+    <script src="assets/script.js" defer></script>
+  </body>
 </html>
