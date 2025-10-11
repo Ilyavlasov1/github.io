@@ -1,171 +1,286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ilya Vlasov — Cybersecurity & QA</title>
-
-    <!-- Security: strict Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;">
-
-    <meta name="color-scheme" content="dark" />
-    <meta name="description" content=" Ilya Vlasov — Cybersecurity-focused QA engineer. Portfolio, projects, and contact." />
-    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" as="style" href="assets/styles.css" />
-    <link rel="stylesheet" href="assets/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Portfolio</title>
+    <!--
+      The following stylesheet contains all custom styles for the site.  It
+      defines a nature‑inspired colour palette and responsive layouts.  See
+      styles.css for details.
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts for clean, modern typography -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome for icons (contact links, certifications, skills, etc.).
+         Using the CDN version avoids bundling unnecessary scripts and
+         provides access to a rich icon set.  The integrity and
+         crossorigin attributes improve security by ensuring the file
+         integrity is checked by the browser. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-oEVx4+YdUjI+V0jLFYSWdT9NKTh6hf5ub8oc1T4f31mkNSP2RwBuXhwQ4EiwLDuRjE40V1m7qAzClxrUv5UGKw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <!-- Fixed navigation bar with anchor links to each section.  The nav
+         remains translucent to allow the background gradient to subtly
+         show through. -->
+    <nav>
+      <a href="#" class="logo">Your Name</a>
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-    <header class="site-header container">
-      <div class="brand">
-        <!-- Replace this image with your real photo named exactly 'portfolio_selfie.jpg' -->
-        <img class="avatar" src="assets/img/portfolio_selfie.jpg" alt="Portrait of Ilya Vlasov" />
-        <div class="brand-text">
-          <h1>Ilya Vlasov</h1>
-          <p class="tag">Cybersecurity - QA Automation</p>
-          <p class="loc">Chicago, IL</p>
+    <!-- Hero section: includes a larger portrait and contact details.  The
+         picture should be replaced with your own high‑quality photo saved
+         as "profile.jpg" in the same directory as this file. -->
+    <section id="home" class="hero">
+      <div class="hero-image">
+        <!-- Replace "profile.jpg" with the actual filename of your portrait. -->
+        <img src="profile.jpg" alt="Portrait of Your Name" />
+      </div>
+      <div class="hero-content">
+        <h1>Your Name</h1>
+        <p>Cloud Architect &amp; DevOps Engineer</p>
+        <div class="contact">
+          <a href="mailto:youremail@example.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span>youremail@example.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/username"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="tel:+1234567890">
+            <i class="fa-solid fa-phone"></i>
+            <span>(123) 456‑7890</span>
+          </a>
         </div>
       </div>
-      <nav class="nav">
-        <a href="#portfolio">Portfolio</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#certs">Certs</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    </section>
 
-    <main id="main">
-      <section class="hero">
-        <div class="container hero__grid">
-          <div class="hero__text">
-            <h2>Threat-minded QA -> AppSec</h2>
-            <p>
-              I test how systems actually break: secure-by-default configs, automated checks, and 
-              clean repro steps that engineers can ship against.
-            </p>
-            <div class="cta">
-              <a class="btn btn--primary" href="https://github.com/Ilyavlasov1?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a class="btn" href="#portfolio">See Portfolio</a>
-              <a class="btn" href="assets/Ilya_Vlasov_Resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume (PDF)</a>
+    <main>
+      <!-- Portfolio Section -->
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img
+              src="placeholder_light_gray_block.png"
+              alt="Screenshot of Project 1"
+            />
+            <div class="card-content">
+              <h3>Project Title One</h3>
+              <p>
+                Concise summary of your project highlighting the core
+                technologies and business value. Keep descriptions brief and
+                informative.
+              </p>
+              <a
+                href="https://github.com/yourusername/project1"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Project</a
+              >
             </div>
           </div>
-          <figure class="hero__art">
-            <img src="assets/img/stock-terminal.jpg" alt="Green-on-black terminal motif" />
-          </figure>
-        </div>
-        <div class="bg-grid" aria-hidden="true"></div>
-      </section>
-
-      <section id="portfolio" class="section container">
-        <h3 class="section__title">Portfolio</h3>
-        <ul class="cards">
-          <li class="card">
-            <h4>STRIDE-Lite Scanner</h4>
-            <p>CLI templates and scripts to walk apps through STRIDE categories; produces actionable findings.</p>
-            <div class="meta">Python - Threat Modeling - CLI</div>
-            <p class="links">
-              <a href="https://github.com/Ilyavlasov1/threat-model-template?tab=readme-ov-file#threat-model-template-stride--web-app" target="_blank" rel="noopener noreferrer">Repo</a>
-            </p>
-          </li>
-          <li class="card">
-            <h4>HTTP Security Headers Check</h4>
-            <p>Automated header baseline (CSP, HSTS, XFO, COOP/COEP) with friendly pass/fail output.</p>
-            <div class="meta">Python - Requests - CI</div>
-            <p class="links">
-              <a href="https://github.com/Ilyavlasov1/security-headers-scanner?tab=readme-ov-file#security-headers-scanner-quick-check" target="_blank" rel="noopener noreferrer">Repo</a>
-            </p>
-          </li>
-          <li class="card">
-            <h4>OWASP ZAP Smoke</h4>
-            <p>Lightweight spider and passive checks intended for PR-level gating.</p>
-            <div class="meta">ZAP - CI - DAST</div>
-            <p class="links">
-              <a href="https://github.com/Ilyavlasov1/zap-baseline-template?tab=readme-ov-file#owasp-zap-baseline--github-actions-template" target="_blank" rel="noopener noreferrer">Repo</a>
-            </p>
-          </li>
-        </ul>
-      </section>
-
-      <section id="experience" class="section section--alt">
-        <div class="container">
-          <h3 class="section__title">Experience Snapshot</h3>
-          <ul class="timeline">
-            <li>
-              <div class="t-head">
-                <strong>Life Fitness</strong><span>QA Engineer - Integrations</span><time>2024-2025</time>
-              </div>
-              <p>Integration testing for Halo platform; built repeatable checks and defect hygiene across teams.</p>
-            </li>
-            <li>
-              <div class="t-head">
-                <strong>AVA (Live Captions)</strong><span>QA Engineer</span><time>3 yrs</time>
-              </div>
-              <p>Manual and automation; shipped high-impact accessibility features with tight release cycles.</p>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="skills" class="section container">
-        <h3 class="section__title">Skills</h3>
-        <div class="skill-grid">
-          <div>
-            <h5>Security</h5>
-            <ul>
-              <li>Threat Modeling (STRIDE)</li>
-              <li>OWASP Top 10 hygiene</li>
-              <li>HTTP header baselines (CSP/HSTS)</li>
-              <li>DAST (ZAP passive)</li>
-            </ul>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img
+              src="placeholder_light_gray_block.png"
+              alt="Screenshot of Project 2"
+            />
+            <div class="card-content">
+              <h3>Project Title Two</h3>
+              <p>
+                Brief overview of another project. Mention the problem
+                solved and any novel techniques or frameworks used.
+              </p>
+              <a
+                href="https://github.com/yourusername/project2"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Project</a
+              >
+            </div>
           </div>
-          <div>
-            <h5>QA & Automation</h5>
-            <ul>
-              <li>Python, Pytest</li>
-              <li>REST checks</li>
-              <li>TestRail, Jira</li>
-              <li>CI: GitHub Actions</li>
-            </ul>
-          </div>
-          <div>
-            <h5>Cloud</h5>
-            <ul>
-              <li>Azure fundamentals</li>
-              <li>Containers and K8s basics</li>
-            </ul>
+          <!-- Project 3 -->
+          <div class="project-card">
+            <img
+              src="placeholder_light_gray_block.png"
+              alt="Screenshot of Project 3"
+            />
+            <div class="card-content">
+              <h3>Project Title Three</h3>
+              <p>
+                High‑level description of a final project. Emphasise your role
+                and any measurable outcomes or performance improvements.
+              </p>
+              <a
+                href="https://github.com/yourusername/project3"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Project</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="certs" class="section section--alt">
-        <div class="container">
-          <h3 class="section__title">Certifications</h3>
-          <ul class="badges">
-            <li>CompTIA Security+ (prep)</li>
-            <li>AZ-900</li>
-            <li>AI-900</li>
-          </ul>
+      <!-- Certifications Section -->
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-list">
+          <div class="cert-item">
+            <i class="fa-brands fa-microsoft"></i><span>Azure</span>
+          </div>
+          <div class="cert-item">
+            <i class="fa-brands fa-aws"></i><span>AWS</span>
+          </div>
+          <div class="cert-item">
+            <i class="fa-brands fa-google"></i><span>GCP</span>
+          </div>
+          <div class="cert-item">
+            <i class="fa-solid fa-network-wired"></i
+            ><span>CompTIA Network+</span>
+          </div>
+          <div class="cert-item">
+            <i class="fa-solid fa-shield-alt"></i
+            ><span>CompTIA Security+</span>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="section container">
-        <h3 class="section__title">Contact</h3>
+      <!-- Skills Section -->
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fa-brands fa-python"></i><span>Python</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-js"></i><span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-html5"></i><span>HTML5</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-css3-alt"></i><span>CSS3</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-node-js"></i><span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-linux"></i><span>Linux</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-docker"></i><span>Docker</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-brands fa-kubernetes"></i><span>Kubernetes</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-solid fa-cloud"></i><span>Cloud</span>
+          </div>
+          <div class="skill-item">
+            <i class="fa-solid fa-lock"></i><span>Security</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Senior Cloud Engineer – Company&nbsp;A</h3>
+            <span>Feb 2023 – Present</span>
+            <p>
+              Leading the architecture and migration of enterprise workloads
+              to public cloud providers.  Designed scalable infrastructure
+              using Infrastructure‑as‑Code and automated CI/CD pipelines.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>DevOps Engineer – Company&nbsp;B</h3>
+            <span>Jun 2020 – Jan 2023</span>
+            <p>
+              Implemented continuous integration and delivery processes,
+              managed container orchestration with Kubernetes and
+              ensured adherence to security best practices across
+              development teams.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <h3>Systems Administrator – Company&nbsp;C</h3>
+            <span>Sep 2018 – May 2020</span>
+            <p>
+              Oversaw Linux server fleets, improved network resilience and
+              security posture, and automated routine tasks with
+              configuration management tools like Ansible.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact</h2>
         <p>
-          Best way to reach me is on <a href="https://www.linkedin.com/in/ivy-vlasov" target="_blank" rel="noopener noreferrer">LinkedIn</a> 
-          or open an issue on my <a href="https://github.com/ilyavlasov1" target="_blank" rel="noopener noreferrer">GitHub</a>.
+          If you would like to collaborate on a project or simply say hello,
+          feel free to reach out through any of the methods below.
         </p>
-        <p class="small">This site avoids third-party scripts and trackers. All links with target="_blank" use rel="noopener noreferrer".</p>
+        <div class="contact">
+          <a href="mailto:youremail@example.com">
+            <i class="fa-solid fa-envelope"></i>
+            <span>youremail@example.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/username"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="tel:+1234567890">
+            <i class="fa-solid fa-phone"></i>
+            <span>(123) 456‑7890</span>
+          </a>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="y"></span> Ilya Vlasov — Built with security-first defaults.</p>
-      </div>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <p>Built with passion for technology and respect for nature.</p>
     </footer>
-
-    <script src="assets/script.js" defer></script>
   </body>
 </html>
